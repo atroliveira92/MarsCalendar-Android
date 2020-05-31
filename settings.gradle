@@ -1,0 +1,3 @@
+rootProject.name='MarsCalendarExample'
+include ':app'
+include ':marscalendar'

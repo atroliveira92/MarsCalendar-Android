@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#212121</color>
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="red">#d32f2f</color>
+    <color name="dark_red">#b71c1c</color>
+    <color name="disabled_date">#7C7C7C</color>
+    <color name="enbaled_date">#FFFFFF</color>
+</resources>
