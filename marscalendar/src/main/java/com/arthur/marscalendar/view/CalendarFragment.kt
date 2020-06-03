@@ -34,6 +34,8 @@ public class CalendarFragment: Fragment(), OnDayPickerListener {
     private var selectedYear: Int = 0
     private var selectedMonth: Int = 0
 
+    private var listener:OnCalendarListener? = null
+
     companion object {
         const val NUMBER_OF_ROWS = 7
         const val START_YEAR = "start_year"
@@ -51,6 +53,10 @@ public class CalendarFragment: Fragment(), OnDayPickerListener {
             fragment.arguments = args
             return fragment
         }
+    }
+
+    fun setListener(listener: OnCalendarListener) {
+        this.listener = listener
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -151,5 +157,7 @@ public class CalendarFragment: Fragment(), OnDayPickerListener {
 
     override fun onClickDay(day: Day) {
         selectedDate = Date(selectedYear, selectedMonth, day.value)
+
+        listener?.onSelectedDate(selectedDate!!)
     }
 }
